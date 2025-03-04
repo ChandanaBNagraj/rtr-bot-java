@@ -1,5 +1,6 @@
 import dev.robocode.tankroyale.botapi.*;
 import dev.robocode.tankroyale.botapi.events.*;
+import java.awt.*;
 
 
 // ------------------------------------------------------------------
@@ -23,11 +24,22 @@ public class Rcb extends Bot {
         super(BotInfo.fromFile("Rcb.json"));
     }
    
-
+// setBodyColor(new Color(255, 0, 0)); // Metallic silversetGunColor(new Color(0, 255, 0)); // Darker metallic silversetRadarColor(new Color(169, 169, 169)); // Metallic silversetBulletColor(new Color(255, 215, 0)); // Gold for the lightning effectsetScanColor(new Color(255, 255, 255));
+ 
     // Called when a new round is started -> initialize and do some movement
     @Override
     public void run() {
         // Repeat while the bot is running
+        setBodyColor(new Color(255, 255, 0)); 
+         //Metallic silver
+         setGunColor(new Color(0, 255, 255)); 
+         //Darker metallic silver
+         setRadarColor(new Color(160, 255, 160)); 
+         // Metallic silver
+          setBulletColor(new Color(255, 215, 0)); 
+          // Gold for the lightning effect
+          setScanColor(new Color(255, 255, 255));
+
         while (isRunning()) {
             forward(80);
             turnGunRight(360);
