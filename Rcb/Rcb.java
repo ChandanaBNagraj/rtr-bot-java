@@ -34,14 +34,14 @@ public class Rcb extends Bot {
          //Metallic silver
          setGunColor(new Color(0, 255, 255)); 
          //Darker metallic silver
-         setRadarColor(new Color(160, 255, 160)); 
+         setRadarColor(new Color(160, 255, 255)); 
          // Metallic silver
           setBulletColor(new Color(255, 215, 0)); 
           // Gold for the lightning effect
           setScanColor(new Color(255, 255, 255));
 
         while (isRunning()) {
-            forward(80);
+            forward(100);
             fire(1);
             turnGunRight(360);
             fire(1);
