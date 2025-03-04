@@ -1,6 +1,5 @@
 import dev.robocode.tankroyale.botapi.*;
 import dev.robocode.tankroyale.botapi.events.*;
-import java.awt.Color;
 
 
 // ------------------------------------------------------------------
@@ -19,15 +18,11 @@ public class Rcb extends Bot {
         new Rcb().start();
     }
 
-Rcb() {
-        super(BotInfo.fromFile("Rcb.json"));
-        setColors(Color.YELLOW, Color.RED, Color.RED); // Set body, gun, and radar colors
-    }
- 
     // Constructor, which loads the bot config file
     Rcb() {
         super(BotInfo.fromFile("Rcb.json"));
     }
+   
 
     // Called when a new round is started -> initialize and do some movement
     @Override
@@ -44,7 +39,7 @@ Rcb() {
     // We saw another bot -> fire!
     @Override
     public void onScannedBot(ScannedBotEvent e) {
-        fire(1);
+        fire(3);
     }
 
     // We were hit by a bullet -> turn perpendicular to the bullet
