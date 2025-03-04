@@ -48,6 +48,7 @@ public class Rcb extends Bot {
             back(100);
             turnGunRight(360);
             turnGunRight(360);
+            turnGunRight(360);
             fire(1);
 
         }
