@@ -42,7 +42,9 @@ public class Rcb extends Bot {
 
         while (isRunning()) {
             forward(80);
+            fire(1);
             turnGunRight(360);
+            fire(1);
             back(100);
             turnGunRight(360);
             fire(1);
