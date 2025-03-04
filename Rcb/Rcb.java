@@ -41,21 +41,33 @@ public class Rcb extends Bot {
           setScanColor(new Color(255, 255, 255));
 
         while (isRunning()) {
-            forward(80);
+            forward(100);
             fire(1);
             turnGunRight(360);
             fire(1);
             back(100);
             turnGunRight(360);
-            fire(1);
+            fire(2);
 
         }
     }
-
-    // We saw another bot -> fire!
+    // @Override
+    // public void onScannedBot(ScannedBotEvent e) {
+    //     double distance = e.getDistance();
+    //     double firePower = Math.min(500 / distance, 3); // Fire with power based on distance
+    //     fire(firePower);
+ 
+    //     // Aim the gun at the scanned bot
+    //     double absoluteBearing = getHeading() + e.getBearing();
+    //     double bearingFromGun = absoluteBearing - getGunHeading();
+    //     turnGunRight(bearingFromGun);
+    //     //execute();
+    // }
+ 
+    We saw another bot -> fire!
     @Override
     public void onScannedBot(ScannedBotEvent e) {
-        fire(1);
+        fire(3);
         //fire(3);
     }
 
