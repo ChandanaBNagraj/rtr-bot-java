@@ -45,13 +45,16 @@ public class Rcb extends Bot {
             turnGunRight(360);
             back(100);
             turnGunRight(360);
+            fire(1);
+
         }
     }
 
     // We saw another bot -> fire!
     @Override
     public void onScannedBot(ScannedBotEvent e) {
-        fire(3);
+        fire(1);
+        //fire(3);
     }
 
     // We were hit by a bullet -> turn perpendicular to the bullet
