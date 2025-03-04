@@ -41,10 +41,10 @@ public class Rcb extends Bot {
           setScanColor(new Color(255, 255, 255));
 
         while (isRunning()) {
-            forward(50);
+            //forward(50);
           
             turnGunRight(360);
-            //fire(1);
+            fire(1);
             back(100);
             turnGunRight(360);
             fire(1);
