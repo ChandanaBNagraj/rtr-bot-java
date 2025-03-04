@@ -41,13 +41,13 @@ public class Rcb extends Bot {
           setScanColor(new Color(255, 255, 255));
 
         while (isRunning()) {
-            forward(100);
-            fire(1);
+            forward(50);
+           // fire(1);
             turnGunRight(360);
-            fire(1);
+            //fire(1);
             back(100);
             turnGunRight(360);
-            fire(1);
+            //fire(1);
 
         }
     }
@@ -55,7 +55,7 @@ public class Rcb extends Bot {
     // We saw another bot -> fire!
     @Override
     public void onScannedBot(ScannedBotEvent e) {
-        fire(1);
+        fire(3);
         //fire(3);
     }
 
