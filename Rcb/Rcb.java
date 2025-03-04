@@ -1,5 +1,7 @@
 import dev.robocode.tankroyale.botapi.*;
 import dev.robocode.tankroyale.botapi.events.*;
+import java.awt.Color;
+
 
 // ------------------------------------------------------------------
 // Rcb
@@ -17,6 +19,11 @@ public class Rcb extends Bot {
         new Rcb().start();
     }
 
+Rcb() {
+        super(BotInfo.fromFile("Rcb.json"));
+        setColors(Color.YELLOW, Color.RED, Color.RED); // Set body, gun, and radar colors
+    }
+ 
     // Constructor, which loads the bot config file
     Rcb() {
         super(BotInfo.fromFile("Rcb.json"));
