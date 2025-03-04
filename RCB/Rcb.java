@@ -50,4 +50,3 @@ public class Rcb extends Bot {
         turnLeft(90 - bearing);
     }
 }
-
